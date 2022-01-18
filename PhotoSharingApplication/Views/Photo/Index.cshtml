@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>All Photos</title>
+    <link type="text/css" rel="stylesheet" href="~/Contenu/PhotoSharingStyles.css" />
+</head>
+<body>
+    <div>
+        <div class="clear-floats" />
+        <div id="topmenu">
+            @Html.MvcSiteMap().Menu(false, true, true)
+        </div>
+        <div id="fil d’Ariane">
+            @Html.MvcSiteMap().SiteMapPath()
+        </div>
+
+
+
+        <h2>All Photos</h2>
+
+
+
+        <p style="background-color:white">
+            @Html.ActionLink("Add a Photo", "Create", "Photo")
+        </p>
+
+
+
+        @Html.Action("_PhotoGallery", "Photo")
+    </div>
+</body>
+</html>

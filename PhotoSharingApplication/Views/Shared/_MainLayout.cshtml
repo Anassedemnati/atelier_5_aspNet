@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.<c0>Titre</c0> <c1> </title> </c1>
+    <link type="text/css" rel="stylesheet" href="~/Contenu/PhotoSharingStyles.css" />
+
+
+
+
+
+
+</head>
+<body>
+    <div>
+        <h1 class="site-page-title"> Partage de photos d’Aventure Works</h1>
+
+
+
+        <div class="clear-floats" />
+        <div id="topmenu">
+            @Html.MvcSiteMap().Menu(false, true, true)
+        </div>
+        <div id="fil d’Ariane">
+            @Html.MvcSiteMap().SiteMapPath()
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
